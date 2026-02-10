@@ -22,6 +22,7 @@ def main():
     print(greeting())
     count = subjects()
     marks = grades(count)
+    print("Subjects:", len(marks))
     print("Total Marks:", sum(marks))
     print("Average Score:", average_score(marks))
     print("Result:", "Pass" if average_score(marks) >= 50 else "Fail")
