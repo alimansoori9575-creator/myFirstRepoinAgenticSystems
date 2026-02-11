@@ -1,5 +1,6 @@
 ###     Part 4: User Data Processing System     ###
-users = [{"name": "Alice", "scores" : [80, 85, 82, 87], "roles" : {"admin", "editor"}},
+users = [
+    {"name": "Alice", "scores" : [80, 85, 82, 87], "roles" : {"admin", "editor"}},
     {"name": "Bob", "scores" : [79, 67, 90, 84], "roles" : {"visiter", "editor"}},
     {"name": "Jack", "scores" : [64, 83, 94, 87], "roles" : {"editor"}}
     ]
