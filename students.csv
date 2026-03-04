@@ -1,0 +1,9 @@
+Name,Score,Passed,Category
+Ali,91,True,"A+"
+Tauseef,89,True,"A"
+Danish,94,True,"A+"
+Zaid,79,True,"B+"
+Sohail,64,True,"B"
+Aslam,56,True,"B"
+Alice,30,False,"C"
+David,24,False,"D"
