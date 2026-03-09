@@ -1,0 +1,81 @@
+-- Step 1: Create the Table
+CREATE TABLE Students (
+Id INTEGER PRIMARY KEY,
+Name TEXT,
+Score INTEGER,
+Passed BOOLEAN,
+Class INTEGER
+);
+
+-- Step 2: Insert Sample Data
+INSERT INTO Students ( Id,Name,Score,Passed,Class)
+VALUES
+(1, 'Aarav', 92, True, 10),
+(2, 'Diya', 76, True, 10),
+(3, 'Rohan', 65, FALSE, 9),
+(4, 'Meera', 88, TRUE, 10),
+(5, 'Kabir', 54, FALSE, 9),
+(6, 'Ananya', 95, TRUE, 10), 
+(7, 'Rahul', 81, TRUE, 9), 
+(8, 'Sneha', 73, TRUE, 9), 
+(9, 'Arjun', 84, TRUE, 10), 
+(10, 'Kavya', 69, FALSE, 9);
+
+-- SQL Query Tasks --
+
+-- 1. Retrieve all columns from the students table.
+SELECT * FROM students;
+
+-- 2. Retrieve only the name and score columns.
+SELECT name, score FROM students;
+
+-- 3. Retrieve students who scored above 80.
+SELECT * 
+FROM students
+WHERE score > 80;
+
+-- 4. Retrieve students who scored above 80 AND passed.
+SELECT *
+FROM students
+WHERE score > 80 AND passed = TRUE;
+
+-- 5. Retrieve students who scored above 85 OR belong to class 9.
+SELECT *
+FROM students
+WHERE score > 85 OR class = 9;
+
+-- 6. Retrieve students who did NOT pass the exam.(Use the NOT operator.)
+SELECT *
+FROM Students
+WHERE NOT Passed;
+
+-- 7. Return a list of distinct classes.
+SELECT DISTINCT class
+FROM students;
+
+-- 8. Retrieve the top 5 highest-scoring students.
+SELECT *
+FROM students
+ORDER BY score DESC
+LIMIT 5;
+
+-- 9. Retrieve students sorted first by class (ascending) and then by score (descending).
+SELECT *
+FROM students
+ORDER BY class ASC, score DESC;
+
+-- 10. Use an alias to rename score as final_score.
+SELECT id, name, score AS final_score, passed, class
+FROM students;
+
+-- 11. Write one combined query that:
+- Selects name and score.
+- Filters students who scored above 75.
+- Sorts by score in descending order.
+- Returns only the top 3 results.
+
+SELECT Name, Score
+FROM Students
+ORDER BY Score DESC
+WHERE Score > 75
+LIMIT 3;
